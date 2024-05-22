@@ -1,0 +1,8 @@
+public/dashboard
+dashboard
+.env
+composer.json
+composer.lock
+vendor
+index.php
+server.php
