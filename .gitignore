@@ -2,6 +2,6 @@ public/dashboard
 dashboard
 .env
 
-vendor
+
 index.php
 server.php
