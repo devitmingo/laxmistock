@@ -157,7 +157,7 @@ input[type=number] {
     <!-- Page header -->
     <div class="container-fluid">
         <div class="page-header">
-            <div class="logo"><a href="{{ url('/') }}" title=""><h2>Mohan Enterprises</h2></a></div>
+            <div class="logo"><a href="{{ url('/') }}" title=""><h2>Stock</h2></a></div>
             <ul class="middle-nav">
                 <li><a href="#" class="btn btn-default"><h4 id="openingBalance"></h4> <span>Opeing Balance</span></a></li>
                 <li><a href="#" class="btn btn-default"><h4 id="closeBalance"></h4> <span>Closing Balance</span></a></li>
