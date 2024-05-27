@@ -30,12 +30,9 @@ class SaleDetailsController extends Controller
                                 <td>'.$row->product->name.'</td>
                                 <td>'.$row->unit->name.'</td>
                                
-                                <td>'.$row->buyRate.'</td>
                                 <td>'.$row->saleRate.'</td>
                                 <td>'.$row->qty.'</td>
                                 <td>'.$row->total.'</td>
-                                <td>'.$grandBuy.'</td>
-                                <td>'.$row->profit.'</td>
                                 <td>
                                 
                                 <a href="#" onclick="edit_record('.$row->id.')" class="btn btn-default btn-icon btn-xs tip" rel="tooltip" title="EDIT">
@@ -119,12 +116,9 @@ class SaleDetailsController extends Controller
                                 <td>'.$row->product->name.'</td>
                                 <td>'.$row->unit->name.'</td>
                                
-                                <td>'.$row->buyRate.'</td>
                                 <td>'.$row->saleRate.'</td>
                                 <td>'.$row->qty.'</td>
                                 <td>'.$row->total.'</td>
-                                <td>'.$grandBuy.'</td>
-                                <td>'.$row->profit.'</td>
                                 <td>
                                 
                                 <a href="#" onclick="edit_record('.$row->id.')" class="btn btn-default btn-icon btn-xs tip" rel="tooltip" title="EDIT">
