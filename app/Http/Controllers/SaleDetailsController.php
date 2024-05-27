@@ -49,7 +49,7 @@ class SaleDetailsController extends Controller
                             </tr>
             ';
         }
-        $html.='<tr><th colspan="6" style="text-align:right;">Total Amount</th><th>'.$grandtotal.'</th><th>'.$grandprofit.'</th><th>'.$grandBuy.'</th><th>
+        $html.='<tr><th colspan="4" style="text-align:right;">Total Amount</th><th>'.$grandtotal.'</th><th>
         <input type="hidden" id="grandTotal" name="grandTotal" value="'.$grandtotal.'" />
         </th></tr>';
         return $html;
