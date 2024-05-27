@@ -145,7 +145,7 @@ if(isset($sale)){
                                 <th style="display:none;">Buy Rate</th>
                                 <th>Rate</th>
                                 <th>Qty</th>
-                                <th>Sale Amount</th>
+                                <th>Total</th>
                                 <th style="display:none;">Buy Amount</th>
                                 <th style="display:none;">Profit Amount</th>
                                 <th>Action</th>
@@ -157,7 +157,7 @@ if(isset($sale)){
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th colspan="7"></th>
+                                <th colspan="4"></th>
                                 <th>
                                 <select data-placeholder="Choose a Payment Type" class="select-search" name="paymentType" id="paymentType" tabindex="2">
                                     <option value="">select</option>
