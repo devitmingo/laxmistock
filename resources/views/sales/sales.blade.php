@@ -72,12 +72,12 @@ if(isset($sale)){
                                 <th colspan="2">Product &nbsp <i class="fa fa-plus-square" style="color:green;font-size:14px;" data-toggle="modal" data-target="#addProduct"></i></th>   
                                 <th>Unit</th>                            
                                 <th>Buy Rate</th>
-                                <th>Sale Rate</th>
+                                <th>Rate</th>
                                 <th>Qty</th>
                                 
                                 <th>Sale Amount</th>
-                                <th>Buy Amount</th>
-                                <th>Profit Amount</th>
+                                <th style="display:none;">Buy Amount</th>
+                                <th style="display:none;">Profit Amount</th>
                                 <th>Action</th>
                             </tr>
                             <tr>
@@ -98,7 +98,7 @@ if(isset($sale)){
                                     </select>
                                 </td>
 
-                                <td>
+                                <td style="display:none;">
                                         <input class="form-control" type="number" name="buyRate" id="buyRate"  required>
                                 </td>
                                 <td>
@@ -111,10 +111,10 @@ if(isset($sale)){
                                 <td>
                                         <input class="form-control" type="text" name="total" id="total" readonly >
                                 </td>
-                                <td>
+                                <td style="display:none;">
                                         <input class="form-control" type="text" name="buyAmount" id="buyAmount" readonly >
                                 </td>
-                                <td>
+                                <td style="display:none;">
                                         <input class="form-control" type="text" name="profit" id="profit" readonly >
                                 </td>
 
