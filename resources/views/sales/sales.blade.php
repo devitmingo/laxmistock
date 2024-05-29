@@ -200,15 +200,15 @@ if(isset($sale)){
         <h5 class="modal-title" id="addParty">Add Party</h5>
       </div>
       <div class="modal-body">
-   
+    <span id="validation-errors"></span>
 
       <input type="text" class="form-control" name="xname"   id ="xname" placeholder=" Name" style="width:90%; margin:10px;" />
       <input type="text" class="form-control" name="xmobile"   id ="xmobile" placeholder="Mobile" style="width:90%; margin:10px;" />
-      <input type="text" class="form-control" name="xaddress"   id ="xaddress" placeholder="Min Stcok " style="width:90%; margin:10px;" />
+      <input type="text" class="form-control" name="xaddress"   id ="xaddress" placeholder="Address " style="width:90%; margin:10px;" />
       <input type="text" class="form-control" name="xopen"   id ="xopen" placeholder="Opening Balance " style="width:90%; margin:10px;" />
 
 
-      <div style="width:92%">
+      <div style="width:90%; margin-left:10px;">
                             <select data-placeholder="Choose a Opening Bal. Type" class="select-search" name="xopenType" id="xopenType" required tabindex="2">
                                 <option value=""></option> 
                                 <option value="Dr">Dr</option> 
@@ -234,30 +234,55 @@ function addParty() {
     var address = document.getElementById('xaddress').value;
     var opening_balance = document.getElementById('xopen').value;
     var opening_balance_type = document.getElementById('xopenType').value;
-    
-    if(name=='')
-	{
-        alert('Please Fill Party Name');
-    }
-		$.ajax({
-                url:"{{ url('add_new') }}?page=party&opening_balance="+opening_balance+"&opening_balance_type="+opening_balance_type+"&name="+name+"&mobile="+mobile+"&address="+address+"&customer=1&status=1",
-                type: 'get',
-                success: function(response){
-                    $('#addParty').modal('hide')
-                    swal("New Party Added", {
-                    icon: "success",
-                });	
-             
-			 $('#xname').val('');
-             $('#xmobile').val('');
-             $('#xaddress').val('');
-             $('#xopen').val('');
-             $('#xopenType').val('').trigger('chosen:updated');
-          	 
-             fetchParty();		
-		  }
-        });
+    var status = true;
+        if(name=='')
+        {
+          status = false;
+            alert('Please Fill Party Name');
+        }
+        if(mobile=='')
+        {
+          status = false;
+            alert('Please fill mobile');
+        }
 
+        if(address=='')
+        {
+          status = false;
+            alert('Please fill address');
+        }
+
+        if(opening_balance=='')
+        {
+          status = false;
+            alert('Please fill opening baance');
+        }
+        if(opening_balance_type=='')
+        {
+          status = false;
+            alert('Please select Opening balance type');
+        }
+      if(status==true){
+          $.ajax({
+                    url:"{{ url('add_new') }}?page=party&opening_balance="+opening_balance+"&opening_balance_type="+opening_balance_type+"&name="+name+"&mobile="+mobile+"&address="+address+"&customer=1&status=1",
+                    type: 'get',
+                    success: function(response){
+                        $('#addParty').modal('hide')
+                        swal("New Party Added", {
+                        icon: "success",
+                    });	
+                
+                    
+                $('#xname').val('');
+                $('#xmobile').val('');
+                $('#xaddress').val('');
+                $('#xopen').val('');
+                $('#xopenType').val('').trigger('chosen:updated');
+                
+                fetchParty();		
+          }
+            });
+      }
 }
 
 </script>

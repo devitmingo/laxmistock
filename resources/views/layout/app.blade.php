@@ -257,7 +257,7 @@ getInfo();
                         <li><a href="{{ route('incomeIndex') }}">Income List</a></li>
                      </ul>
                 </li>
-                <li stye="display:none;">
+                <li style="display:none;">
                     <a href="#" class="expand"><i class="fa fa-align-justify"></i> Quotation</a>
                     <ul>
                         <li><a href="{{ route('quatation.create') }}">Add Quotation</a></li>
@@ -268,7 +268,7 @@ getInfo();
                 <li>
                     <a href="#" class="expand"><i class="fa fa-align-justify"></i> Reports</a>
                     <ul>
-                        <li stye="display:none;"><a href="{{ route('profitLossStatement') }}">Profit Loss Statement</a></li>
+                        <li style="display:none;"><a href="{{ route('profitLossStatement') }}">Profit Loss Statement</a></li>
                         <li><a href="{{ route('productMinStocks') }}">Product Min Stocks</a></li>
                         <li><a href="{{ route('companyLedger') }}">Company Legder</a></li>
                         <li><a href="{{ route('saleLedger') }}">Supplier Report</a></li>
