@@ -27,7 +27,6 @@ class PurchaseDetailController extends Controller
                                 <td>'.$row->unit->name.'</td>
                                 <td>'.$row->qty.'</td>
                                 <td>'.$row->buyRate.'</td>
-                                <td>'.$row->saleRate.'</td>
                                 <td>'.$row->total.'</td>
                                 <td>
                                 

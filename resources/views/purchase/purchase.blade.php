@@ -83,8 +83,8 @@ input[type=number] {
                                 <th>#</th>
                                 <th>Product &nbsp <i class="fa fa-plus-square" style="color:green;font-size:14px;" data-toggle="modal" data-target="#addProduct"></i></th>    
                                 <th>Unit </th>                            
-                                <th>Buy Rate</th>
-                                <th>Sale Rate</th>
+                                <th>Rate</th>
+                                <th style="display:none;">Sale Rate</th>
                                 <th>Qty</th>
                                 <th>Total</th>
                                 <th>Action</th>
@@ -108,8 +108,8 @@ input[type=number] {
                                         <input class="form-control" type="number" name="buyRate" id="buyRate"  >
                                 </td>
 
-                                <td>
-                                        <input class="form-control" type="number" name="saleRate" id="saleRate"  >
+                                <td style="display:none;">
+                                        <input class="form-control" type="number" name="saleRate" id="saleRate" >
                                 </td>
 
                                 <td>
@@ -142,8 +142,8 @@ input[type=number] {
                                 <th>Product</th>    
                                 <th>Unit</th>                            
                                 <th>Qty</th>
-                                <th>Buy Rate</th>
-                                <th>Sale Rate</th>
+                                <th>Rate</th>
+                                
                                 <th>Total</th>
                                 <th>Action</th>
                             </tr>
@@ -153,7 +153,7 @@ input[type=number] {
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th colspan="4"></th>
+                                <th colspan="3"></th>
                                 <th>
                                 <select data-placeholder="Choose a Payment Type" class="select-search" name="paymentType" id="paymentType" tabindex="2">
                                     <option value="">select</option>
