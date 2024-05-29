@@ -53,7 +53,7 @@ class PurchaseController extends Controller
                 'product_id' => $request->product_id,
                 'unit_id' => $request->unit_id,
                 'buyRate' => $request->buyRate,
-                'saleRate' => $request->saleRate,
+                // 'saleRate' => $request->saleRate,
                 'rate' => $request->rate,
                 'total' => $request->total
             );
@@ -72,7 +72,7 @@ class PurchaseController extends Controller
                 'unit_id' => $request->unit_id,
                 'qty' => $request->qty,
                 'buyRate' => $request->buyRate,
-                'saleRate' => $request->saleRate,
+                // 'saleRate' => $request->saleRate,
                 'total' => $request->total,
                 'user_id' => auth()->user()->id,
                 'session_id' => Session::get('session_id')
